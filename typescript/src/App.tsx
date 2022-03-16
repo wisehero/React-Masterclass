@@ -1,11 +1,14 @@
 import styled from "styled-components"
-
-
-
+import Circle from "./Circle";
 
 
 function App() {
-  return null
+  return (
+    <div>
+      <Circle bgColor="teal"></Circle>
+      <Circle bgColor="tomato"></Circle>
+    </div>
+  )
   
 }
 
