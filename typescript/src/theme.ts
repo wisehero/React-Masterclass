@@ -3,11 +3,11 @@ import { DefaultTheme } from "styled-components";
 export const lightTheme:DefaultTheme = {
     bgColor: "whilte",
     textColor: "black",
-    btnColor: "totato"
+    accentColor:"tomato"
 }
 
 export const darkTheme:DefaultTheme = {
     bgColor: "black",
     textColor:"white",
-    btnColor: "totato"
+    accentColor:"tomato"
 }
