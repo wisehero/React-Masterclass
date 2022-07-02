@@ -3,14 +3,19 @@ import {Link} from "react-router-dom";
 import {useEffect, useState} from "react";
 
 const Container = styled.div`
-  padding: 0 20px`;
+  padding: 0 20px;
+  max-width: 480px;
+  margin: 0 auto;
+`;
 const Header = styled.header`
   height: 15vh;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
-const CoinsList = styled.ul``;
+const CoinsList = styled.ul`
+  max-width: 500px;
+`;
 const Coin = styled.li`
   background-color: white;
   color: ${(props) => props.theme.bgColor};
@@ -22,7 +27,6 @@ const Coin = styled.li`
     align-items: center;
     padding: 20px;
     transition: color 0.2s ease-in;
-
   }
 
   &:hover {
