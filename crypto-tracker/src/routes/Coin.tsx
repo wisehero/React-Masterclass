@@ -142,7 +142,10 @@ interface PriceData {
     };
 }
 
-function Coin() {
+interface ICoinProps {
+}
+
+function Coin({}: ICoinProps) {
     const {coinId} = useParams<RouteParams>();
     const {state} = useLocation<RouteState>();
     // const [loading, setLoading] = useState(true);
@@ -187,8 +190,8 @@ function Coin() {
                             <span>${infoData?.symbol}</span>
                         </OverviewItem>
                         <OverviewItem>
-                            <span>Open Source:</span>
-                            <span>{infoData?.open_source ? "Yes" : "No"}</span>
+                            <span>Price:</span>
+                            <span>${infoData?.quotes.USD?.price?.toFixed(3)}</span>
                         </OverviewItem>
                     </Overview>
                     <Description>{infoData?.description}</Description>
@@ -215,7 +218,7 @@ function Coin() {
                             <Price/>
                         </Route>
                         <Route path={`/:coinId/chart`}>
-                            <Chart/>
+                            <Chart coinId={coinId}/>
                         </Route>
                     </Switch>
                 </>
